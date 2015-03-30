@@ -10,6 +10,14 @@
     <slack:users-info config-ref="" />
 <!-- END_INCLUDE(slack:users-info) -->
 
+<!-- BEGIN_INCLUDE(slack:team-access-logs) -->
+    <slack:team-access-logs config-ref="" />
+<!-- END_INCLUDE(slack:team-access-logs) -->
+
+<!-- BEGIN_INCLUDE(slack:team-info) -->
+    <slack:team-info config-ref="" />
+<!-- END_INCLUDE(slack:team-info) -->
+
 <!-- BEGIN_INCLUDE(slack:users-list) -->
     <slack:users-list config-ref="" />
 <!-- END_INCLUDE(slack:users-list) -->

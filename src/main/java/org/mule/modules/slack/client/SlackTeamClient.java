@@ -1,8 +1,5 @@
 package org.mule.modules.slack.client;
 
-import org.mule.api.annotations.param.Default;
-import org.mule.api.annotations.param.Optional;
-
 /**
  * 
  * @author Eddú Meléndez
@@ -10,9 +7,7 @@ import org.mule.api.annotations.param.Optional;
  */
 public interface SlackTeamClient {
 
-	String teamAccessLogs(String accessToken,
-			@Optional @Default("100") int count,
-			@Optional @Default("2") int page);
+	String teamAccessLogs(String accessToken, String count, String page);
 
 	String teamInfo(String accessToken);
 

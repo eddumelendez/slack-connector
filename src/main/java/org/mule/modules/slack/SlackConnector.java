@@ -11,6 +11,7 @@ import org.mule.api.annotations.ConnectionStrategy;
 import org.mule.api.annotations.Connector;
 import org.mule.api.annotations.Processor;
 import org.mule.api.annotations.oauth.OAuthProtected;
+import org.mule.api.annotations.param.Default;
 import org.mule.api.annotations.param.Optional;
 import org.mule.api.annotations.rest.RestQueryParam;
 import org.mule.modules.connection.strategy.SlackOauthStrategy;
@@ -51,6 +52,23 @@ public class SlackConnector {
 	@OAuthProtected
 	public String authTest() throws IOException {
 		return this.slackClient.getSlackAuthClient().authTest(
+				this.slackOauthStrategy.getAccessToken());
+	}
+
+	@Processor
+	@OAuthProtected
+	public String teamAccessLogs(
+			@RestQueryParam("count") @Default("100") String count,
+			@RestQueryParam("page") @Default("2") String page)
+			throws IOException {
+		return this.slackClient.getSlackTeamClient().teamAccessLogs(
+				this.slackOauthStrategy.getAccessToken(), count, page);
+	}
+
+	@Processor
+	@OAuthProtected
+	public String teamInfo() throws IOException {
+		return this.slackClient.getSlackTeamClient().teamInfo(
 				this.slackOauthStrategy.getAccessToken());
 	}
 

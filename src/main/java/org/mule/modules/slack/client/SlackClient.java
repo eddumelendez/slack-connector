@@ -1,14 +1,62 @@
 package org.mule.modules.slack.client;
 
-import java.io.IOException;
-
 /**
  * 
  * @author Eddú Meléndez
  *
  */
-public interface SlackClient {
+public class SlackClient {
 
-	String getUserList(String accessToken) throws IOException;
+	public SlackApiClient getSlackApiClient() {
+		return new SlackApiClientImpl();
+	}
+
+	public SlackAuthClient getSlackAuthClient() {
+		return new SlackAuthClientImpl();
+	}
+
+	public SlackChannelClient getSlackChannelClient() {
+		return new SlackChannelClientImpl();
+	}
+
+	public SlackChatClient getSlackChatClient() {
+		return new SlackChatClientImpl();
+	}
+
+	public SlackEmojiClient geSlackEmojiClient() {
+		return new SlackEmojiClientImpl();
+	}
+
+	public SlackFileClient geSlackFileClient() {
+		return new SlackFileClientImpl();
+	}
+
+	public SlackGroupClient geSlackGroupClient() {
+		return new SlackGroupClientImpl();
+	}
+
+	public SlackIMClient geSlackIMClient() {
+		return new SlackIMClientImpl();
+	}
+
+	public SlackOauthClient geSlackOauthClient() {
+		return new SlackOauthClientImpl();
+	}
+
+	public SlackRTMClient getSlackRTMClient() {
+		return new SlackRTMClientImpl();
+	}
+
+	public SlackSearchClient getSlackSearchClient() {
+		return new SlackSearchClientImpl();
+	}
+
+	public SlackTeamClient getSlackTeamClient() {
+		return new SlackTeamClientImpl();
+	}
+
+	public SlackUserClient getSlackUserClient() {
+		return new SlackUserClientImpl();
+	}
 
 }

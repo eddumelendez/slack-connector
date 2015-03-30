@@ -1,3 +1,11 @@
-<!-- BEGIN_INCLUDE(slack:my-processor) -->
-    <slack:my-processor config-ref="" content="#[map-payload:content]" />
-<!-- END_INCLUDE(slack:my-processor) -->
+<!-- BEGIN_INCLUDE(slack:api-test) -->
+    <slack:api-test config-ref="" />
+<!-- END_INCLUDE(slack:api-test) -->
+
+<!-- BEGIN_INCLUDE(slack:users-info) -->
+    <slack:users-info config-ref="" />
+<!-- END_INCLUDE(slack:users-info) -->
+
+<!-- BEGIN_INCLUDE(slack:users-list) -->
+    <slack:users-list config-ref="" />
+<!-- END_INCLUDE(slack:users-list) -->

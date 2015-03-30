@@ -9,8 +9,8 @@ import java.io.IOException;
  */
 public interface SlackUserClient {
 
-	String getUsersList(String accessToken) throws IOException;
+	String usersList(String accessToken) throws IOException;
 
-	String getUsersInfo(String accessToken, String user);
+	String usersInfo(String accessToken, String user);
 	
 }

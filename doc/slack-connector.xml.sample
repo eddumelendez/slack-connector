@@ -2,6 +2,10 @@
     <slack:api-test config-ref="" />
 <!-- END_INCLUDE(slack:api-test) -->
 
+<!-- BEGIN_INCLUDE(slack:auth-test) -->
+    <slack:auth-test config-ref="" />
+<!-- END_INCLUDE(slack:auth-test) -->
+
 <!-- BEGIN_INCLUDE(slack:users-info) -->
     <slack:users-info config-ref="" />
 <!-- END_INCLUDE(slack:users-info) -->

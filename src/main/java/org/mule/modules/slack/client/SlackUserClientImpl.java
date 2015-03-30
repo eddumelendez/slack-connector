@@ -23,7 +23,7 @@ public class SlackUserClientImpl extends BaseClient implements SlackUserClient {
 	 * @see org.mule.modules.slack.SlackClient#getUserList(java.lang.String)
 	 */
 	@Override
-	public String getUsersList(String accessToken) throws IOException {
+	public String usersList(String accessToken) throws IOException {
 		logger.info("Calling usersGetList - AccessToken: " + accessToken);
 		URI uri = getPath().path("/users.list")
 				.queryParam("token", accessToken).build();
@@ -34,7 +34,7 @@ public class SlackUserClientImpl extends BaseClient implements SlackUserClient {
 	}
 
 	@Override
-	public String getUsersInfo(String accessToken, String user) {
+	public String usersInfo(String accessToken, String user) {
 		logger.info("Calling userGetInfo - AccessToken: " + accessToken);
 		URI uri = getPath().path("/users.info")
 				.queryParam("token", accessToken).queryParam("user", user)

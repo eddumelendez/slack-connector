@@ -49,16 +49,23 @@ public class SlackConnector {
 
 	@Processor
 	@OAuthProtected
+	public String authTest() throws IOException {
+		return this.slackClient.getSlackAuthClient().authTest(
+				this.slackOauthStrategy.getAccessToken());
+	}
+
+	@Processor
+	@OAuthProtected
 	public String usersInfo(@RestQueryParam("user") String user)
 			throws IOException {
-		return this.slackClient.getSlackUserClient().getUsersInfo(
+		return this.slackClient.getSlackUserClient().usersInfo(
 				this.slackOauthStrategy.getAccessToken(), user);
 	}
 
 	@Processor
 	@OAuthProtected
 	public String usersList() throws IOException {
-		return this.slackClient.getSlackUserClient().getUsersList(
+		return this.slackClient.getSlackUserClient().usersList(
 				this.slackOauthStrategy.getAccessToken());
 	}
 
